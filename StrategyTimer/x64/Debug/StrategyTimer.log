@@ -1,0 +1,6 @@
+﻿  logger.cpp
+  main.cpp
+C:\Users\User\source\repos\StrategyTimer\StrategyTimer\main.cpp(26,26): warning C4101: ex: неиспользованная локальная переменная
+  timer.cpp
+  Создание кода...
+  StrategyTimer.vcxproj -> C:\Users\User\source\repos\StrategyTimer\x64\Debug\StrategyTimer.exe

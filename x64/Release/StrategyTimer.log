@@ -1,0 +1,23 @@
+2025-03-31 11:39:52 - 0: StrategyTimer.ini: Started loading settings.
+2025-03-31 11:39:52 - 0: StrategyTimer.ini: Settings loaded sucessfully.
+2025-03-31 11:39:52 - 0: Settings loaded
+2025-03-31 11:39:52 - 0: processesToKill.txt: Started loading processes.
+2025-03-31 11:39:52 - 0: processesToKill.txt: Processes loaded.
+2025-03-31 11:39:52 - 0: Processes loaded
+2025-03-31 11:39:52 - 0: Timer is set for 2 minutes
+2025-03-31 11:39:52 - 0: Timer: Started
+2025-03-31 11:41:49 - 0: Timer: Ended
+2025-03-31 11:41:49 - 0: Playing Sound Alert
+2025-03-31 11:41:57 - 0: End of Playing Sound Alert
+2025-03-31 11:41:57 - 0: Sound played, 3 seconds until process kill
+2025-03-31 11:41:57 - 0: Timer: Started
+2025-03-31 11:42:00 - 0: Timer: Ended
+2025-03-31 11:42:00 - 0: Start of Process Killing
+2025-03-31 11:42:00 - 0: Process name: Everything.exe, pid = 4172 - Kill Confirmed
+2025-03-31 11:42:00 - 0: Process name: notepad.exe, pid = 17704 - Kill Confirmed
+2025-03-31 11:42:00 - 0: End of Process Killing
+2025-03-31 11:42:00 - 0: Processes killed
+2025-03-31 11:42:00 - 0: processesToKill.txt: Saving processes.
+2025-03-31 11:42:00 - 0: processesToKill.txt: Processes saved sucessfully.
+2025-03-31 11:42:00 - 0: Processes saved
+

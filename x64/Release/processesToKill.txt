@@ -1,0 +1,5 @@
+Everything.exe
+Maze.exe
+notepad.exe
+RimWorldWin64.exe
+stellaris.exe
