@@ -129,8 +129,8 @@ void Timer::StartTimer(unsigned int minutes)
     }
 
     PlaySoundAlert();
-    std::cout << std::format("Sound played, {} seconds until process kill", m_Settings.m_TimeAfterAlert) << std::endl;
-    logmsg(std::format("Sound played, {} seconds until process kill", m_Settings.m_TimeAfterAlert));
+    std::cout << std::format("Sound played, {} seconds until process killing", m_Settings.m_TimeAfterAlert) << std::endl;
+    logmsg(std::format("Sound played, {} seconds until process killing", m_Settings.m_TimeAfterAlert));
 
     timerThread = std::thread(&Timer::WaitSeconds, this, m_Settings.m_TimeAfterAlert);
     timerThread.detach();
@@ -222,12 +222,12 @@ void Timer::KillProcesses() const
                 {
                     // We should not close system processes, thats why we have to check them by IsProcessCritical.
                     // Buuuut, its does not exactly shows critical processes in this case.
-                    // Due to insufficient rights OpenProcess cannot open any processes besides ones created by User,
-                    // so for processes from SYSTEM, NETWORK SERVICE, LOCAL SERVICE etc. IsProcessCritical returns error, 
-                    // hence 0, and for User processes it returns 1. So it actually does the job of filtering system processes
+                    // Due to insufficient rights OpenProcess cannot open any processes besides ones created by User (or something like that),
+                    // so for processes from SYSTEM, NETWORK SERVICE, LOCAL SERVICE etc. IsProcessCritical throws error and returns 0, 
+                    // and for User processes returns 1. So it actually does the job of filtering system processes
                     // which shouldn't be closed by user, just not in an expected way. Now, if you run programm with
                     // Admin rights, OpenProcess opens most of the processes, except for few very important ones, 
-                    // so we additionally checking for !isCrit
+                    // so additionally we are checking for !isCrit
                     
                     HANDLE hProcess = OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION + PROCESS_TERMINATE, FALSE, entry.th32ProcessID);
                     BOOL isCrit = FALSE;
