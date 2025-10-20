@@ -9,15 +9,15 @@ int main(int argc, char** argv)
 	setlocale(LC_ALL, "en_US.utf8");
 
 	int minutes = 0;
-	// If there is arguments
+	// If there are any arguments
 	if (argc > 1)
 	{
-		// Try converting minutes to int, if fails, make it 60
+		// Try converting minutes to int, if it fails, make it 60
 		try 
 		{
 			minutes = std::stoi(argv[1]);
 
-			// if minutes negative, make it positive
+			// if minutes variable is negative, make it positive
 			if (minutes < 0)
 			{
 				minutes -= 2 * minutes;
@@ -28,7 +28,7 @@ int main(int argc, char** argv)
 			minutes = 60;
 		}
 	}
-	// If there is none, make minutes 60
+	// If there are no args
 	else
 	{
 		minutes = 60;
